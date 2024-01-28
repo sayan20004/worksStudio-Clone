@@ -1,0 +1,241 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Gilroy;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.nav{
+    position: fixed;
+    width: 100%;
+    padding: 30px 40px;
+    z-index: 10;
+}
+
+
+.loader{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: none; */
+}
+
+
+.loader h1{
+    font-size: 4vw;
+    color: transparent;
+    background: linear-gradient(to right,rgb(255, 98, 0),orangered,red);
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+.loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+.loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+.loader h2{
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+.loader h2{
+    font-size: 8vw;
+    animation-delay: 4s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.page1{
+    height: 125vh;
+    width: 100%;
+    background-color: #f5e41b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.page1-bottom{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    gap: 150vh;
+    bottom: 10vh;
+}
+.page1-bottom h5{
+    font-size: large;
+    font-weight: 100;
+}
+.page1 h1{
+    font-weight: 100;
+    font-size: 6vw;
+    text-align: center;
+    line-height: 9.5vh;
+    letter-spacing: -3px;
+}
+.page2{
+    
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    
+}
+.page2{
+
+    /* background-image: url(./worksStudioImages/00-Hero_.jpg); */
+    background-size: cover;
+    background-position: center;
+    transition: all ease 0.5s;
+}
+.page2 {
+    height: 105vh;
+    width: 100%;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.elem{
+    position: relative;
+    width: 100%;
+}
+.elem h2{
+    font-weight: 100;
+    font-size: 10vh;
+    position: relative;
+    z-index: 10;
+    line-height: 8vh;
+}
+.moving-text-main{
+    background-color: #f5e41b;
+    overflow-x: auto;
+    white-space: nowrap;
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 25%;
+    padding: 5px 0;
+    
+}
+.elem .moving-text-main{
+    transform: scaleY(0);
+    transition: all ease 0.5s;
+}
+.elem:hover .moving-text-main{
+    transform: scale(1);
+}
+.elem:hover h2{
+    font-style: italic;
+    color: black;
+}
+.elem {
+    position: relative;
+    cursor: pointer;
+}
+.elem .blur{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    box-shadow: 10px 0px 20px 20px #f5e41b,-10px 0px 20px 20px #f5e41b;
+    z-index: 8;
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right,#f5e41b,#f5e41b,#f5e41b);
+}
+
+
+.moving-text-main h4{
+    display: inline-block;
+}
+.moving-text-main::-webkit-scrollbar{
+    display: none;
+}
+.moving-text{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: text-move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  
+}
+.moving-text h4{
+    font-weight: 500;
+    font-size: 2vh;
+    color: black;
+    margin: 0 16px;
+}
+@keyframes text-move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+}
+.images{
+    justify-content: center;
+    display: flex;
+}
+
+.line1{
+    flex-direction: column;
+    display: flex;
+    margin: 20px;
+}
+
+.line2{
+    flex-direction: column;
+    margin: 20px;
+    display: flex;
+}
+.line3{
+    flex-direction: column;
+    margin: 20px;
+    display: flex;
+}
+.images img{
+    margin: 20px 0;
+    width: 30vw;
+    height: 50vw;
+}
+
